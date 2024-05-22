@@ -1,0 +1,523 @@
+openapi: 3.0.0
+info:
+  title: Library Management System api docs.
+
+
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:5551/
+paths:
+  /api/section/{section_id}:
+    description: End point to read, update and delete a section resource.
+    get:
+      description: Operation to Read section resource.
+      parameters:
+        - in: path
+          name: section_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                title: section object
+                type: object
+                properties:
+                  section_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Thriller
+                  date_created:
+                    type: string
+                    example: '2024-02-12'
+                  description:
+                    type: string
+                    example: Section Description Example
+                  search_name:
+                    type: string
+                    example: thriller
+        '500':
+          description: Internal Server Error
+        '404':
+          description: Section not found
+
+    put:
+      description: Operation to update the section resource.
+      parameters:
+        - in: path
+          name: section_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Fiction
+                description:
+                  type: string
+                  example: Section Description
+      responses:
+        '200':
+          description: Successfuly updated
+          content:
+            application/json:
+              schema:
+                title: section object
+                type: object
+                properties:
+                  section_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Thriller
+                  date_created:
+                    type: string
+                    example: '2024-02-12'
+                  description:
+                    type: string
+                    example: Section Description Example
+                  search_name:
+                    type: string
+                    example: thriller
+        '404':
+          description: Section not found
+        '500':
+          description: Internal Server Error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+    delete:
+      description: Operation to delete the section resource
+      parameters:
+        - in: path
+          name: section_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Successfully Deleted
+        '404':
+          description: Section not found
+        '500':
+          description: Intenal Server Error
+
+  /api/section/:
+    description: End point to create section resource
+    post:
+      description: Operation to create the section resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Thriller
+                description:
+                  type: string
+                  example: Section Description
+      responses:
+        '201':
+          description: Successfully Created
+          content:
+            application/json:
+              schema:
+                title: section object
+                type: object
+                properties:
+                  section_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Thriller
+                  date_created:
+                    type: string
+                    example: '2024-02-12'
+                  description:
+                    type: string
+                    example: Section Description Example
+                  search_name:
+                    type: string
+                    example: thriller
+        '500':
+          description: Internal Server Error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+
+
+
+  /api/book/{book_id}:
+    description: Url to read, update and delete the book resource.
+    get:
+      description: Operation to read book resource
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                title: book object
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Harry Potter
+                  search_name:
+                    type: string
+                    example: harry_potter
+                  content:
+                    type: string
+                    example: harry_potter.pdf
+                  authors:
+                    type: string
+                    example: J. K. Rowling
+                  search_authors:
+                    type: string
+                    example: j k rowling
+                  no_of_pages:
+                    type: integer
+                    example: 700
+                  vol:
+                    type: integer
+                    example: 2
+                  section_id:
+                    type: integer
+                    example: 1
+        '500':
+          description: Internal server error
+        '404':
+          description: Student not found
+
+    put:
+      description: Operation to update the book resource
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Harry Potter
+                authors:
+                  type: string
+                  example: J. K. Rowling
+                no_of_pages:
+                  type: integer
+                  example: 700
+                vol:
+                  type: integer
+                  example: 2
+                section_id:
+                  type: integer
+                  example: 1
+      responses:
+        '200':
+          description: Successfully updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Harry Potter
+                  search_name:
+                    type: string
+                    example: harry_potter
+                  content:
+                    type: string
+                    example: harry_potter.pdf
+                  authors:
+                    type: string
+                    example: J. K. Rowling
+                  search_authors:
+                    type: string
+                    example: j k rowling
+                  no_of_pages:
+                    type: integer
+                    example: 700
+                  vol:
+                    type: integer
+                    example: 2
+                  section_id:
+                    type: integer
+                    example: 1
+        '404':
+          description: Book not found
+        '500':
+          description: Internal Server Error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+    delete:
+      description: Operation to delete the book resource
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Successfully Deleted
+        '500':
+          description: Internal Server Error
+        '404':
+          description: Book not found
+
+  /api/book:
+    description: Url to create book resource
+    post:
+      description: Operation to create the book resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Harry Potter
+                authors:
+                  type: string
+                  example: J. K. Rowling
+                no_of_pages:
+                  type: integer
+                  example: 700
+                vol:
+                  type: integer
+                  example: 2
+                section_id:
+                  type: integer
+                  example: 1
+      responses:
+        '201':
+          description: Successfully Created
+          content:
+            application/json:
+              schema:
+                title: student object
+                type: object
+                properties:
+                  book_id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Harry Potter
+                  search_name:
+                    type: string
+                    example: harry_potter
+                  content:
+                    type: string
+                    example: harry_potter.pdf
+                  authors:
+                    type: string
+                    example: J. K. Rowling
+                  search_authors:
+                    type: string
+                    example: j k rowling
+                  no_of_pages:
+                    type: integer
+                    example: 700
+                  vol:
+                    type: integer
+                    example: 2
+                  section_id:
+                    type: integer
+                    example: 1
+        '500':
+          description: Internal Server Error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+
+  /api/issue/{book_id}/{username}:
+    description: Url to get the issue details for a particular book and user .
+    get:
+      description: Url to get the issue details for a particular book and user.
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+            example: raju
+      responses:
+        '200':
+          description: Request Successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                      example: 10
+                    book_id:
+                      type: integer
+                      example: 1
+                    username:
+                      type: string
+                      example: raju
+                    issue_date:
+                      type: string
+                      example: '2024-02-12'
+                    return_date:
+                      type: string
+                      example: '2024-02-14'
+
+        '404':
+          description: Book issue not found
+        '500':
+          description: Internal Server Error
+
+
+    delete:
+      description: Url to get the issue details for a particular book and user.
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+            example: raju
+      responses:
+        '200':
+          description: Successfully Deleted
+        '500':
+          description: Internal Server Error
+        '404':
+          description: Issue not found
+
+    post:
+      description: Url to create a new book issue.
+      parameters:
+        - in: path
+          name: book_id
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+            example: raju
+      responses:
+        '201':
+          description: Successfully Created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                      example: 10
+                    book_id:
+                      type: integer
+                      example: 1
+                    username:
+                      type: string
+                      example: raju
+                    issue_date:
+                      type: string
+                      example: '2024-02-12'
+                    return_date:
+                      type: string
+                      example: '2024-02-14'
+        '409':
+          description: Book is already issued
+        '404':
+          description: Book issue not found
+        '500':
+          description: Internal Server Error
+

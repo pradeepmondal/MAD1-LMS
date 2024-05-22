@@ -1,0 +1,25 @@
+body {
+    background-color: #F1E6D9;
+    height: 100vh;
+}
+
+.container {
+    color: white;
+    width: max-content;
+    height: max-content;
+    margin: 5rem auto;
+    padding: 10rem;
+    background-color: #af5908ad;
+
+}
+
+.label-text {
+    color: #AD7F5D;
+
+}
+
+.outer-box {
+
+    border: 1px solid #AD7F5D;
+    border-radius: 3rem;
+}

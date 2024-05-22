@@ -1,0 +1,53 @@
+body {
+    background-color: #F1E6D9;
+    height: 100vh;
+}
+
+.container {
+    width: max-content;
+    height: max-content;
+    margin: auto auto;
+    padding-top: 10rem;
+
+
+}
+
+.heading {
+    background-color: #F1E6D9;
+    color: #A87F40;
+    font-family: Arial;
+    text-align: left;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.heading-note {
+    font-size: 2rem;
+    padding-left: 25rem;
+    margin: 0;
+    color: #A87F40;
+}
+
+#heading-2 {
+
+    font-size: 5rem;
+}
+
+.login-button {
+    background-color: #A87F40;
+    color: white;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 12rem;
+    margin-left: 42rem;
+    cursor: pointer;
+}
+
+/*.login-button:hover {*/
+/*    background-color: #30799B;*/
+/*}*/

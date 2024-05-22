@@ -1,0 +1,66 @@
+body {
+    background-color: #F1E6D9;
+    height: 100vh;
+}
+
+.container {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    padding: 10rem;
+
+
+}
+
+.label-text {
+    color: #AD7F5D;
+
+}
+
+.input-field {
+    min-width: 22rem;
+
+}
+
+
+
+#username {
+    background-color: rgba(255, 255, 255, 0.750);
+}
+
+#password {
+    background-color: rgba(255, 255, 255, 0.750);
+}
+
+
+.button {
+    background-color: #A87F40;
+    border-color: #A87F40;
+}
+
+
+.login-text {
+    padding-top: 4rem;
+}
+
+.login-text span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.librarian-login-text {
+    padding-top: 0rem;
+}
+
+
+.librarian-login-text span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.alert {
+    color: red;
+    font-size: 15rem;
+}

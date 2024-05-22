@@ -1,0 +1,7 @@
+#navbar-brand, #navbar-home, #navbar-books, #navbar-users, #navbar-stats {
+    cursor: pointer;
+}
+
+#lib-indicator {
+    color: red;
+}

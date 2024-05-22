@@ -1,0 +1,84 @@
+
+#navbar-brand, #navbar-home, #navbar-explore, #navbar-my-stats {
+    cursor: pointer;
+}
+
+#navbar-explore a {
+    color: white;
+}
+
+body {
+    background-color: #F1E6D9;
+    height: 100vh;
+}
+
+
+
+#navbar-books a {
+    color: white;
+}
+
+#lib-indicator {
+    color: red;
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.section-button {
+    display: grid;
+    place-self: baseline;
+}
+
+.parent-card {
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+.break {
+    /*content: '';*/
+  /*width: 100%;*/
+
+}
+
+.container-body form{
+    width: max-content;
+    height: max-content;
+    margin: auto auto;
+    padding-top: 3rem;
+
+
+}
+
+.container-body {
+    width: max-content;
+    height: max-content;
+    margin: auto 2rem;
+    padding-top: 2rem; }
+
+
+
+.search-bar {
+    display: flex;
+    justify-content: end;
+}
+
+.search-bar input {
+    width: 15rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    opacity: 0.80;
+}
+
+.search-bar button {
+
+    margin-right: 1rem;
+
+}

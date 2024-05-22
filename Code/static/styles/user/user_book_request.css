@@ -1,0 +1,94 @@
+body {
+    background-color: #F1E6D9;
+    height: 100vh;
+}
+
+#navbar-brand, #navbar-home, #navbar-books, #navbar-users, #navbar-stats {
+    cursor: pointer;
+}
+
+#navbar-books a {
+    color: white;
+}
+
+.container-body form{
+    width: max-content;
+    height: max-content;
+    margin: auto auto;
+    padding-top: 3rem;
+
+
+}
+
+.container-body {
+    width: max-content;
+    height: max-content;
+    margin: auto auto;
+    padding-top: 5rem;
+
+
+}
+
+.label-text {
+    color: #AD7F5D;
+
+}
+
+.input-field {
+    min-width: 18rem;
+
+}
+
+#username {
+    background-color: rgba(255, 255, 255, 0.750);
+}
+
+#password {
+    background-color: rgba(255, 255, 255, 0.750);
+}
+
+
+.button {
+    background-color: #A87F40;
+    border-color: #A87F40;
+}
+
+
+.registration-text {
+    padding-top: 4rem;
+}
+
+.registration-text span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.librarian-login-text {
+    padding-top: 0rem;
+}
+
+
+.librarian-login-text span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.new-book-box {
+    border: 2px solid #AD7F5D;;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.button-group {
+    padding: 1rem;
+}
+
+.button-group button {
+    margin: 0.5rem;
+}
+
+#lib-indicator {
+    color: red;
+}
