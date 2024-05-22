@@ -12,6 +12,7 @@ the following technologies:
 
 To setup the project locally:
 - navigate to the Code directory
+- create a ```.env``` file and add ```SECRET_KEY = any_random_value``` to the file and save it
 - Open any terminal in this path, then,
   - type ```sh local_setup.sh``` to run the ```local_setup``` shell script and follow the instructions to setup the virtual environment and install the dependencies 
   - type ```sh local_run.sh``` to run the ```local_run``` shell script and follow the instructions to initiate a local run on your machine
